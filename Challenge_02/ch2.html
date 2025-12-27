@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Form Validator</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="registerForm" novalidate>
+
+        <!-- Username -->
+        <label>Username</label><br>
+        <input type="text" id="username">
+        <span id="usernameMsg"></span>
+        <br><br>
+
+        <!-- Email -->
+        <label>Email</label><br>
+        <input type="email" id="email">
+        <span id="emailMsg"></span>
+        <br><br>
+
+        <!-- Password -->
+        <label>Password</label><br>
+        <input type="password" id="password">
+        <span id="passwordMsg"></span>
+        <br><br>
+
+        <!-- Confirm Password -->
+        <label>Confirm Password</label><br>
+        <input type="password" id="confirmPassword">
+        <span id="confirmMsg"></span>
+        <br><br>
+
+        <!-- Submit -->
+        <button type="submit" id="submitBtn" disabled>Register</button>
+
+    </form>
+
+    <script src="./ch2.js"></script>
+</body>
+</html>
