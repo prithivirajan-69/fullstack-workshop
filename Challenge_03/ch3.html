@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Work Todo</h2>
+
+
+<input type="text" id="taskInput" placeholder="Add Task">
+<select id="categorySelect">
+    <option value="Work">Work</option>
+    <option value="Personal">Personal</option>
+</select>
+<button id="addBtn">Add</button>
+
+<hr>
+
+
+<p>
+    Filter:
+    <button class="filter" data-filter="All">All</button>
+    <button class="filter" data-filter="Work">Work</button>
+    <button class="filter" data-filter="Personal">Personal</button>
+</p>
+
+
+<p id="countInfo"></p>
+
+
+<ul id="todoList"></ul>
+
+<script src="./ch3.js"></script>
+
+</body>
+</html>
