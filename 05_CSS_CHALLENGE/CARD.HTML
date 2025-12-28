@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Product Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CARD.CSS">
+</head>
+<body>
+
+<!-- Toggle Button (Bonus: Light / Dark Mode) -->
+<div class="theme-toggle">
+    <input type="checkbox" id="toggle">
+    <label for="toggle">🌙 Dark Mode</label>
+</div>
+
+<!-- Product Cards Grid -->
+<div class="card-grid">
+
+    <!-- Product Card -->
+    <div class="card">
+        <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796"
+                 alt="Product"
+                 class="card-image">
+            <span class="card-badge">New</span>
+        </div>
+
+        <div class="card-content">
+            <h3 class="card-title">Wireless Headphones</h3>
+
+            <p class="card-description">
+                High-quality wireless headphones with noise cancellation and long battery life.
+            </p>
+
+            <div class="card-price">
+                <span class="price-original">$99.99</span>
+                <span class="price-sale">$79.99</span>
+            </div>
+
+            <button class="card-button">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Sold Out Card (Bonus) -->
+    <div class="card sold-out">
+        <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1b0"
+                 alt="Product"
+                 class="card-image">
+            <span class="sold-overlay">Sold Out</span>
+        </div>
+
+        <div class="card-content">
+            <h3 class="card-title">Smart Watch</h3>
+            <p class="card-description">
+                Smartwatch with fitness tracking, heart rate monitor, and notifications.
+            </p>
+
+            <div class="card-price">
+                <span class="price-original">$149.99</span>
+                <span class="price-sale">$119.99</span>
+            </div>
+
+            <button class="card-button" disabled>Unavailable</button>
+        </div>
+    </div>
+
+    <!-- Skeleton Loading Card (Bonus) -->
+    <div class="card skeleton">
+        <div class="skeleton-image"></div>
+        <div class="card-content">
+            <div class="skeleton-text title"></div>
+            <div class="skeleton-text desc"></div>
+            <div class="skeleton-text price"></div>
+            <div class="skeleton-button"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
