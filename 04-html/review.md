@@ -1,31 +1,25 @@
 # Review: 04-html
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 19:15
+**Review Date:** 2025-12-30 11:42
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 5
+**Files submitted:** 6
 
 ### Required Files
 
-- ❌ Missing: `portfolio-v1.html`
-- ❌ Missing: `portfolio-v2.html`
-- ❌ Missing: `portfolio-v2.css`
-- ❌ Missing: `portfolio-v3.html`
+- ✅ Found: `portfolio-v1.html`
+- ✅ Found: `portfolio-v2.html`
+- ✅ Found: `portfolio-v2.css`
+- ✅ Found: `portfolio-v3.html`
 
 ### Code Review
 
-📄 **1_Portfolio.css**
-   Path: `04-html/1_PORTFOLIO/1_Portfolio.css`
-   Lines: 86
-
-   - ✅ CSS file present
-
-📄 **1_Portfolio.html**
-   Path: `04-html/1_PORTFOLIO/1_Portfolio.html`
+📄 **portfolio-v1.html**
+   Path: `04-html/portfolio-v1.html`
    Lines: 139
 
     - ✅ Has `<!DOCTYPE html>`
@@ -33,11 +27,33 @@
     - ✅ Images have `alt` attributes
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
+    - 📌 **Version 1 (Raw HTML)**
+    - ⚠️ V1 should be raw HTML only (no CSS/Bootstrap)
 
    **Score: 5/5**
 
-📄 **3_Bootstrap_Portfolio.html**
-   Path: `04-html/1_PORTFOLIO/Bootstrap/3_Bootstrap_Portfolio.html`
+📄 **portfolio-v2.css**
+   Path: `04-html/portfolio-v2.css`
+   Lines: 273
+
+   - ✅ CSS file present
+
+📄 **portfolio-v2.html**
+   Path: `04-html/portfolio-v2.html`
+   Lines: 139
+
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Images have `alt` attributes
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
+    - 📌 **Version 2 (HTML + CSS3)**
+    - ✅ Links to CSS stylesheet
+
+   **Score: 5/5**
+
+📄 **portfolio-v3.html**
+   Path: `04-html/portfolio-v3.html`
    Lines: 217
 
     - ✅ Has `<!DOCTYPE html>`
@@ -45,10 +61,13 @@
     - ❌ Images missing `alt` attributes
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
+    - 📌 **Version 3 (Bootstrap)**
+    - ✅ Uses Bootstrap framework
+    - ✅ Uses Bootstrap classes
 
    **Score: 4/5**
 
-### Topic Score: 9 / 30 (30%)
+### Topic Score: 34 / 35 (97%)
 
 ---
 
