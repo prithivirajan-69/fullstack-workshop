@@ -1,7 +1,7 @@
 # Review: 04-html
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 11:42
+**Review Date:** 2025-12-30 15:24
 
 ---
 
@@ -54,20 +54,20 @@
 
 📄 **portfolio-v3.html**
    Path: `04-html/portfolio-v3.html`
-   Lines: 217
+   Lines: 213
 
     - ✅ Has `<!DOCTYPE html>`
     - ✅ Uses semantic HTML5 tags
-    - ❌ Images missing `alt` attributes
+    - ✅ Images have `alt` attributes
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
     - 📌 **Version 3 (Bootstrap)**
     - ✅ Uses Bootstrap framework
     - ✅ Uses Bootstrap classes
 
-   **Score: 4/5**
+   **Score: 5/5**
 
-### Topic Score: 34 / 35 (97%)
+### Topic Score: 35 / 35 (100%)
 
 ---
 
