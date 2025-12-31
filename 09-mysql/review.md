@@ -1,15 +1,27 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-31 09:36
+**Review Date:** 2025-12-31 10:51
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 1
+**Files submitted:** 3
 
-### Code Review
+### Relevance Check
+
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: customer product category order ecommerce schema queries
+   Found only: order 
+   **Please review the exercise requirements and resubmit**
+
+### ⚠️ Review Skipped
+
+The submission does not appear to match the exercise requirements.
+Please complete the correct exercise and resubmit.
+
+### Topic Score: 0 / 100 (0%)
 
 ---
 
@@ -17,7 +29,7 @@
 
 **Status:** ⚠️ Not submitted
 
-Submit to: `09-mysql/challenge-01/`
+Submit to: `09-mysql/challenges/`
 
 ---
 

@@ -1,13 +1,17 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-31 09:35
+**Review Date:** 2025-12-31 10:51
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 2
+**Files submitted:** 1
+
+### Relevance Check
+
+Relevance check not configured for this topic
 
 ### Required Files
 
@@ -45,7 +49,7 @@
 
 **Status:** ⚠️ Not submitted
 
-Submit to: `01-linux/challenge-01/`
+Submit to: `01-linux/challenges/`
 
 ---
 
