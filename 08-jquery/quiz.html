@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f2f6fc;
+            color: #333;
+        }
+
+        #quiz-container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+        }
+
+        #timer {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: right;
+            margin-bottom: 8px;
+        }
+
+        #progress-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0275d8;
+        }
+
+        #question-text {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 15px 0;
+            color: #444;
+        }
+
+        .option {
+            padding: 12px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 8px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s ease;
+            background: #fafafa;
+        }
+
+        .option:hover {
+            background: #e9f2fb;
+            border-color: #2196f3;
+        }
+
+        .option.selected {
+            background: #2196f3;
+            color: #fff;
+            border-color: #1e88e5;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        #prev-btn {
+            background: #6c757d;
+            color: #fff;
+        }
+
+        #next-btn {
+            background: #0275d8;
+            color: #fff;
+        }
+
+        #submit-btn {
+            background: #5cb85c;
+            color: #fff;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #question-buttons .q-btn {
+            background: #fff;
+            border: 1px solid #0275d8;
+            color: #0275d8;
+            margin: 4px 4px;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #question-buttons .q-btn:hover {
+            background: #0275d8;
+            color: #fff;
+        }
+
+        #result-screen h2 {
+            font-size: 26px;
+            color: #333;
+            text-align: center;
+        }
+
+        #score-percent {
+            font-size: 18px;
+            color: #5cb85c;
+            text-align: center;
+        }
+
+        #review {
+            margin-top: 15px;
+            line-height: 1.6;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #0275d8;
+        }
+
+        #review div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen">
+        <div id="timer"></div>
+        <div id="progress-text"></div>
+        <h3 id="question-text"></h3>
+        <div id="options"></div>
+
+        <div>
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="submit-btn" style="display:none;">Submit</button>
+        </div>
+
+        <div id="question-buttons"></div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="result-screen" style="display:none;">
+        <h2>Your Score: <span id="score-count"></span></h2>
+        <p id="score-percent"></p>
+        <div id="review"></div>
+        <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
