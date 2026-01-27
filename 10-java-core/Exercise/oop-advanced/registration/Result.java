@@ -1,24 +1,33 @@
-package oop_advanced;
+package registration;
 
 import java.util.List;
 
 public class Result {
 
-    boolean success;
-    String message;
-    List<String> errors;
+    private boolean success;
+    private String message;
+    private List<String> errors;
 
-    public static Result success(String msg) {
-        Result r = new Result();
-        r.success = true;
-        r.message = msg;
-        return r;
+    private Result(boolean success, String message, List<String> errors) {
+        this.success = success;
+        this.message = message;
+        this.errors = errors;
+    }
+
+    public static Result success(String message) {
+        return new Result(true, message, null);
     }
 
     public static Result failure(List<String> errors) {
-        Result r = new Result();
-        r.success = false;
-        r.errors = errors;
-        return r;
+        return new Result(false, null, errors);
+    }
+
+    @Override
+    public String toString() {
+        if (success) {
+            return "Result{success=true, message=" + message + "}";
+        }
+        return "Result{success=false, errors=" + errors + "}";
     }
 }
+

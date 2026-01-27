@@ -1,4 +1,4 @@
-package oop_advanced;
+package payment;
 
 public class Employee implements Payable, Taxable {
 
@@ -18,5 +18,14 @@ public class Employee implements Payable, Taxable {
     @Override
     public double calculateTax() {
         return salary * Taxable.getTaxRate();
+    }
+
+    @Override
+    public void printPaymentInfo() {
+        System.out.println("Employee: " + name);
+        System.out.println("Salary: $" + salary);
+        System.out.println("Tax: $" + calculateTax());
+        System.out.println("Net Payment: $" + getPaymentAmount());
+        System.out.println("----------------------------");
     }
 }

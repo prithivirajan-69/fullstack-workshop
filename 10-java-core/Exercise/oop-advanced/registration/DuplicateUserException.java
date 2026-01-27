@@ -1,7 +1,8 @@
-package oop_advanced;
+package registration;
 
 public class DuplicateUserException extends RuntimeException {
-    public DuplicateUserException(String msg) {
-        super(msg);
+
+    public DuplicateUserException(String message) {
+        super(message);
     }
 }

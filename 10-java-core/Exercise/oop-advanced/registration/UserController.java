@@ -1,21 +1,27 @@
-package oop_advanced;
+package registration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserController {
 
-    private UserService service = new UserService();
+    private final UserService service = new UserService();
 
-    public Result register(String name, String email, String pwd, int age) {
-        List<String> errors = new ArrayList<>();
+    public Result register(String name, String email, String password, int age) {
 
         try {
-            service.register(new User(name, email, pwd, age));
+            User user = new User(name, email, password, age);
+            service.register(user);
             return Result.success("User registered successfully");
-        } catch (ValidationException | DuplicateUserException e) {
-            errors.add(e.getMessage());
+
+        } catch (ValidationException e) {
+            return Result.failure(e.getErrors());
+
+        } catch (DuplicateUserException e) {
+            return Result.failure(List.of(e.getMessage()));
+
+        } catch (Exception e) {
+            return Result.failure(List.of("Unexpected error occurred"));
         }
-        return Result.failure(errors);
     }
 }
+

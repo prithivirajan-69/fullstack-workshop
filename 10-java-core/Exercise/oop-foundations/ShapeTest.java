@@ -1,8 +1,9 @@
-package oop_foundations;
+package oop_foundation;
 
 public class ShapeTest {
 
     public static void main(String[] args) {
+
         Shape[] shapes = {
             new Circle(5),
             new Rectangle(4, 6),
@@ -10,7 +11,7 @@ public class ShapeTest {
         };
 
         for (Shape s : shapes) {
-            s.displayInfo();
+            s.displayInfo(); 
         }
     }
 }

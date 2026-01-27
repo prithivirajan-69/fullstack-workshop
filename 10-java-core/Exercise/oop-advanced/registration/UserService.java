@@ -1,24 +1,41 @@
-package oop_advanced;
+package registration;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class UserService {
 
-    private static Set<String> emails = new HashSet<>();
+    private static final Set<String> registeredEmails = new HashSet<>();
 
-    public void register(User user) throws ValidationException {
-        if (emails.contains(user.email))
+    public void register(User user)
+            throws ValidationException, DuplicateUserException {
+
+        var errors = user.validate();
+        if (!errors.isEmpty()) {
+            throw new ValidationException(errors);
+        }
+
+        if (registeredEmails.contains(user.getEmail())) {
             throw new DuplicateUserException("Email already registered");
+        }
 
-        validate(user);
-        emails.add(user.email);
+        // Simulate DB save
+        registeredEmails.add(user.getEmail());
     }
 
-    private void validate(User u) throws ValidationException {
-        if (u.name.length() < 2) throw new ValidationException("Name too short");
-        if (!u.email.contains("@")) throw new ValidationException("Invalid email");
-        if (u.password.length() < 8) throw new ValidationException("Password too weak");
-        if (u.age < 13) throw new ValidationException("Must be 13+");
+    public User findByEmail(String email) throws DatabaseException {
+        try (DummyResource res = new DummyResource()) {
+            if (!registeredEmails.contains(email)) {
+                return null;
+            }
+            return new User("Dummy", email, "Dummy123", 20);
+        } catch (Exception e) {
+            throw new DatabaseException("Database access error");
+        }
+    }
+
+    // Dummy resource to demonstrate try-with-resources
+    private static class DummyResource implements AutoCloseable {
+        public void close() {}
     }
 }

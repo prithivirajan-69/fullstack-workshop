@@ -1,4 +1,4 @@
-package oop_advanced;
+package generics;
 
 public class Box<T> {
 

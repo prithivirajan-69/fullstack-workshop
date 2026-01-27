@@ -1,10 +1,12 @@
-package oop_advanced;
+package payment;
 
 public interface Taxable {
 
     double calculateTax();
 
+    // Static method
     static double getTaxRate() {
-        return 0.18;
+        return 0.18; 
     }
 }
+

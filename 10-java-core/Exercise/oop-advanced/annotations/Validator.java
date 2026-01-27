@@ -1,31 +1,54 @@
-package oop_advanced;
+package annotations;
 
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Validator {
 
     public static List<String> validate(Object obj) {
+
         List<String> errors = new ArrayList<>();
 
-        for (Field field : obj.getClass().getDeclaredFields()) {
+        if (obj == null) {
+            errors.add("Object to validate is null");
+            return errors;
+        }
+
+        Class<?> clazz = obj.getClass();
+        Field[] fields = clazz.getDeclaredFields();
+
+        for (Field field : fields) {
             field.setAccessible(true);
+
             try {
                 Object value = field.get(obj);
 
-                if (field.isAnnotationPresent(NotNull.class) && value == null) {
-                    errors.add(field.getAnnotation(NotNull.class).message());
+                // @NotNull validation
+                if (field.isAnnotationPresent(NotNull.class)) {
+                    NotNull notNull = field.getAnnotation(NotNull.class);
+                    if (value == null) {
+                        errors.add(notNull.message());
+                    }
                 }
 
                 if (field.isAnnotationPresent(Validate.class)) {
-                    Validate v = field.getAnnotation(Validate.class);
-                    int num = (int) value;
-                    if (num < v.min() || num > v.max()) {
-                        errors.add(v.message());
+                    Validate validate = field.getAnnotation(Validate.class);
+
+                    if (value instanceof Number) {
+                        int intValue = ((Number) value).intValue();
+                        if (intValue < validate.min() || intValue > validate.max()) {
+                            errors.add(validate.message());
+                        }
                     }
                 }
-            } catch (Exception ignored) {}
+
+            } catch (IllegalAccessException e) {
+                errors.add("Could not access field: " + field.getName());
+            }
         }
+
         return errors;
     }
 }
+

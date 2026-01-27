@@ -1,7 +1,8 @@
-package oop_advanced;
+package registration;
 
 public class DatabaseException extends Exception {
-    public DatabaseException(String msg) {
-        super(msg);
+
+    public DatabaseException(String message) {
+        super(message);
     }
 }

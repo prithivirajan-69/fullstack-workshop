@@ -1,4 +1,4 @@
-package oop_advanced;
+package payment;
 
 public class Invoice implements Payable {
 
@@ -18,4 +18,13 @@ public class Invoice implements Payable {
     public double getPaymentAmount() {
         return quantity * pricePerItem;
     }
+
+    @Override
+    public void printPaymentInfo() {
+        System.out.println("Invoice [" + partNumber + " - " + description + "]");
+        System.out.println("Quantity: " + quantity + ", Price per item: $" + pricePerItem);
+        System.out.println("Invoice Total: $" + getPaymentAmount());
+        System.out.println("----------------------------");
+    }
 }
+
